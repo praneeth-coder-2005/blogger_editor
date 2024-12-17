@@ -1,8 +1,8 @@
 import logging
 import os
 from telegram import Update, Bot
-from telegram.ext import Updater, CommandHandler, CallbackContext, MessageHandler 
-from telegram.ext.filters import Filters
+from telegram.ext import Updater, CommandHandler, CallbackContext, MessageHandler
+from telegram.ext.filters import Filters  # Correct Import
 from flask import Flask, request, redirect, url_for, session
 from google.oauth2 import credentials
 from google_auth_oauthlib.flow import Flow
