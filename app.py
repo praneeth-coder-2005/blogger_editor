@@ -134,7 +134,7 @@ def main():
     dp.add_handler(CommandHandler("login", login))
     dp.add_handler(CommandHandler("compose", compose))
     dp.add_handler(CommandHandler("publish", publish))
-    dp.add_handler(MessageHandler(filters.text & ~filters.command, handle_message)) # Corrected line
+    dp.add_handler(MessageHandler(filters.text & ~filters.command, handle_message))
 
     # Start telegram bot
     updater.start_polling()
