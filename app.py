@@ -129,7 +129,7 @@ def main():
     logging.basicConfig(level=logging.INFO)
 
     bot = Bot(TELEGRAM_BOT_TOKEN)  # Create a Bot object
-    updater = Updater(bot=bot)    # Pass the Bot object to Updater
+    updater = Updater(bot=bot, use_context=True)    # Pass the Bot object to Updater
 
     dp = updater.dispatcher
     dp.add_handler(CommandHandler("start", start))
