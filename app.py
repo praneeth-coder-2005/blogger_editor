@@ -2,7 +2,7 @@ import logging
 import os
 from telegram import Update, Bot
 from telegram.ext import Updater, CommandHandler, CallbackContext, MessageHandler
-from telegram.ext.filters import Filters  # Correct Import
+from telegram.ext import filters  # Import the filters module
 from flask import Flask, request, redirect, url_for, session
 from google.oauth2 import credentials
 from google_auth_oauthlib.flow import Flow
@@ -134,7 +134,7 @@ def main():
     dp.add_handler(CommandHandler("login", login))
     dp.add_handler(CommandHandler("compose", compose))
     dp.add_handler(CommandHandler("publish", publish))
-    dp.add_handler(MessageHandler(Filters.text & ~Filters.command, handle_message))
+    dp.add_handler(MessageHandler(filters.text & ~filters.command, handle_message)) # Corrected line
 
     # Start telegram bot
     updater.start_polling()
