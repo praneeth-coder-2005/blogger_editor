@@ -26,7 +26,7 @@ SCOPES = ["https://www.googleapis.com/auth/blogger"]
 BLOG_ID = "737863940949257967"
 
 # Other Settings
-CREDENTIALS_FILE = "credentials.json"  # Where we'll store user credentials (not recommended for production)
+CREDENTIALS_FILE = "client_secrets.json"  # Where we'll store user credentials (not recommended for production)
 
 # Directory to store user credentials
 USER_CREDENTIALS_DIR = "user_creds"
