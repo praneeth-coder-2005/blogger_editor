@@ -128,7 +128,9 @@ def creds_to_dict(creds):
 def main():
     logging.basicConfig(level=logging.INFO)
 
-    updater = Updater(TELEGRAM_BOT_TOKEN) # Removed update_queue argument
+    bot = Bot(TELEGRAM_BOT_TOKEN)  # Create a Bot object
+    updater = Updater(bot=bot)    # Pass the Bot object to Updater
+
     dp = updater.dispatcher
     dp.add_handler(CommandHandler("start", start))
     dp.add_handler(CommandHandler("login", login))
